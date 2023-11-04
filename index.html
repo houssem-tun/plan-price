@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+      background: rgb(1,0,5);
+background: linear-gradient(90deg, rgba(1,0,5,1) 0%, rgba(26,121,9,1) 45%, rgba(24,128,27,1) 71%, rgba(0,255,64,1) 100%);
+    }
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 2rem;
+    }
+    .pricing-plan {
+      flex: 1;
+      max-width: 400px;
+      padding: 20px;
+      background: rgb(109,149,143);
+background: linear-gradient(90deg, rgba(109,149,143,1) 0%, rgba(95,191,191,1) 22%, rgba(168,213,207,1) 49%, rgba(233,233,221,1) 75%, rgba(238,238,231,1) 100%);
+      border-radius: 15px;
+      text-align: center;
+      border: 2px solid grey;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    .plan-title{
+      font-weight: bold;
+      font-size: 24px;
+      margin-top: 10px;
+    }
+    .plan-price{
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .plan-features{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .plan-features li{
+      margin-bottom: 20px;
+    }
+    .plan-button{
+      border: none;
+      background-color: orange;
+      border-radius: 10%;
+      color: #fff;
+      padding: 10px;
+    }
+  
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 1250px) {
+      .pricing-container{
+        flex-direction: column;
+        height: 100%;
+      }
+    }
+    footer{
+      margin-top: 60px;
+    }
+    .pricing-container > #Premium{
+      background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    }
+    footer{
+clear: both;
+text-align: center;
+font-size: larger;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$11.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div id="Premium" class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+  </div>
+  <footer>
+    Copyright © Houssem Abdelkader
+  </footer>
+
+</body>
+
+</html>
